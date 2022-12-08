@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        // ALERT POP-UP BOX
+        function btn_alert() {
+            alert("Hello User");
+        }
+
+
+        // CONFIRM POP-UP BOX
+        function btn_confirm() {
+            if (confirm("Are you sure youn want to leave this page???")) {
+                // document.getElementById("p1").innerHTML = "ok";
+                document.body.style.backgroundColor = "gray";
+            }
+            else {
+                // document.getElementById("p1").innerHTML = "cancel";
+                document.body.style.backgroundColor = "maroon";
+            }
+        }
+
+        // PROMPT POP-UP BOX
+        function btn_prompt() {
+            let uname = prompt("Enter Your Name");
+
+            if (uname == "") {
+                alert("Enter Your Name");
+            }
+            else {
+                document.getElementById("p2").innerHTML = uname;
+            }
+        }
+    </script>
+
+    <!-- Prompt Pop-up -->
+</head>
+
+<body>
+    <!--ALert Pop-up Box  -->
+    <button onclick="btn_alert()">Alert
+    </button>
+    <hr />
+
+    <!-- Confirm Pop-up Box -->
+    <p id="p1"></p>
+    <button onclick="btn_confirm()">Confirm
+    </button>
+
+    <hr />
+    <!-- Prompt Pop-up Box -->
+    <p id="p2"></p>
+    <button onclick="btn_prompt()">Prompt
+    </button>
+</body>
+
+</html>
